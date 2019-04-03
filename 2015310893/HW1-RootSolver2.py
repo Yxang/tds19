@@ -12,13 +12,14 @@ def __root_solver_2_single(a, b, c):
     :param c: b
     :return: (x1, x2)
     """
+    assert isinstance()
     delta = b * b - 4 * a * c
     if delta < 0:
         return None, None
     elif delta == 0:
-        return -b / 2, -b / 2
+        return -b / 2 / a, -b / 2 / a
     else:
-        return (-b + np.sqrt(delta)) / 2, (-b - np.sqrt(delta)) / 2
+        return (-b + np.sqrt(delta)) / 2 / a, (-b - np.sqrt(delta)) / 2 / a
 
 
 def __print_roots(a, b, c):
