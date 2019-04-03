@@ -12,7 +12,12 @@ def __root_solver_2_single(a, b, c):
     :param c: b
     :return: (x1, x2)
     """
-    assert isinstance()
+    try:
+        a = float(a)
+        b = float(b)
+        c = float(c)
+    except ValueError:
+        ValueError('input is not numberic')
     delta = b * b - 4 * a * c
     if delta < 0:
         return None, None
